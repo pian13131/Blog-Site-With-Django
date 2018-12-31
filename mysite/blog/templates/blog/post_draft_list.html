@@ -1,14 +1,13 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
-	{% for post in posts %}
-		<div class="post">
-			<p class="date">
-				created: {{post.created_date|date:'d-m-Y'}}
-			</p>
-			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h1>
-			<p>{{post.text|truncatechars:200}}</p>
-		</div>
-	{% endfor %}
-
+	{% if post_list %}
+		{% for post in post_list %}
+			<div class="post">
+				<h3><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h3>
+				<p class="date"><span class="far fa-clock"></span> {{post.created_date|date:'d/m/Y'}}</p>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h4>No Draft</h4>
+	{% endif %}
 {% endblock %}

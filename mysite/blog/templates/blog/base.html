@@ -22,26 +22,26 @@
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">My Blog</a></li>
-				<li><a class="nav-link" href="{% url 'about' %}">About</a></li>
-				<li><a class="nav-link" href="https://github.com/pian13131">Github</a></li>
-				<li><a class="nav-link" href="https://www.linkedin.com/in/jialun-lyu-00180416b">LinkedIn</a></li>
+				<li><a class="nav-link" href="{% url 'about' %}"><span class="fas fa-info-circle"></span></a></li>
+				<li><a class="nav-link" href="https://github.com/pian13131"><span class="fab fa-github-square"></span></a></li>
+				<li><a class="nav-link" href="https://www.linkedin.com/in/jialun-lyu-00180416b"><span class="fab fa-linkedin"></span></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				{% if user.is_authenticated %}
 				<li>
-					<a href="{% url 'post_new' %}">New Post</a>
+					<a class="nav-link" href="{% url 'post_new' %}"><span class="fas fa-plus"></span></a>
 				</li>
 				<li>
-					<a href="{% url 'post_draft_list' %}">Drafts</a>
+					<a class="nav-link" href="{% url 'post_draft_list' %}"><span class="far fa-file"></span></a>
 				</li>
 				<li>
-					<a href="{% url 'logout' %}">Log Out</a>
+					<a class="nav-link" href="{% url 'logout' %}"><span class="fas fa-sign-out-alt"></span></a>
 				</li>
 				<li>
-					<a href="">Welcome:{{user.username}}</a>
+					<a class="nav-link" href="">{{user.username}}</a>
 				</li>
 				{% else %}
-				<li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="far fa-user"></span></a></li>
+				<li><a class='nav navbar-right nav-link' href="{% url 'login' %}" ><span class="far fa-user"></span></a></li>
 				{% endif %}
 			</ul>
 		</div>

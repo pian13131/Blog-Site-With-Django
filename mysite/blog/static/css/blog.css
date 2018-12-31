@@ -1,6 +1,5 @@
 .techfont{
-  font-family: 'Roboto', san-serif;
-  font-size: 1.5em;
+  /*font-family: 'Roboto', san-serif;*/
   margin-bottom: 10px;
 }
 
@@ -10,7 +9,7 @@
 }
 
 .bigbrand{
-  font-size: 1.5em;
+
 }
 
 .postdate{
@@ -18,14 +17,13 @@
 }
 
 .posttitle{
-  font-family: 'Roboto', san-serif;
-  font-size: 3em;
+  /*font-family: 'Roboto', san-serif;*/
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .postcontent{
-  font-family: 'Montserrat';
-  font-size: 1.5em;
+  /*font-family: 'Montserrat';*/
 }
 
 .btn-comment{
