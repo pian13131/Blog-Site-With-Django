@@ -5,6 +5,7 @@
 	<title>Blog</title>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<!-- Medium Style Editor -->
 	<script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
@@ -23,7 +24,7 @@
 				<li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">My Blog</a></li>
 				<li><a class="nav-link" href="{% url 'about' %}">About</a></li>
 				<li><a class="nav-link" href="https://github.com/pian13131">Github</a></li>
-				<li><a class="nav-link" href="www.linkedin.com/in/jialun-lyu-00180416b">LinkedIn</a></li>
+				<li><a class="nav-link" href="https://www.linkedin.com/in/jialun-lyu-00180416b">LinkedIn</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				{% if user.is_authenticated %}
@@ -40,7 +41,7 @@
 					<a href="">Welcome:{{user.username}}</a>
 				</li>
 				{% else %}
-				<li><a class='nav navbar-right' href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
+				<li><a class='nav navbar-right' href="{% url 'login' %}" ><span class="far fa-user"></span></a></li>
 				{% endif %}
 			</ul>
 		</div>
